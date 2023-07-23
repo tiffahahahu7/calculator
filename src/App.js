@@ -107,33 +107,36 @@ const App = () => {
   };
 
   return (
-    <Wrapper>
-      <Screen value={calc.num ? calc.num : calc.res} />
-      <ButtonBox>
-      {
-          btnValues.flat().map((btn, i) => {
-            return (
-              <Button
-                key={i}
-                id={btn.id}
-                value={btn.value}
-                onClick={
-                  btn.value === "AC"
-                  ? resetClickHandler
-                  : btn.value === "="
-                  ? equalsClickHandler
-                  : btn.value === "/" || btn.value === "X" || btn.value === "-" || btn.value === "+"
-                  ? signClickHandler
-                  : btn.value === "."
-                  ? commaClickHandler
-                  : numClickHandler
-                }
-              />
-            );
-          })
-        }
-      </ButtonBox>
-    </Wrapper>
+    <div className="App">
+      <Wrapper>
+        <Screen value={calc.num ? calc.num : calc.res} />
+        <ButtonBox>
+        {
+            btnValues.flat().map((btn, i) => {
+              return (
+                <Button
+                  key={i}
+                  id={btn.id}
+                  value={btn.value}
+                  onClick={
+                    btn.value === "AC"
+                    ? resetClickHandler
+                    : btn.value === "="
+                    ? equalsClickHandler
+                    : btn.value === "/" || btn.value === "X" || btn.value === "-" || btn.value === "+"
+                    ? signClickHandler
+                    : btn.value === "."
+                    ? commaClickHandler
+                    : numClickHandler
+                  }
+                />
+              );
+            })
+          }
+        </ButtonBox>
+      </Wrapper>
+    </div>
+
   );
 };
 

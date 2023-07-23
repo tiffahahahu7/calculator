@@ -1,5 +1,3 @@
-import "./Screen.css";
-
 const Screen = ({ value }) => {
     return (
       <div id="display" className="screen">
