@@ -58,8 +58,6 @@ const App = () => {
         res:
           calc.num === "0" && calc.sign === "/"
             ? "Can't divide with 0"
-            : calc.neg
-            ? math(Number(calc.res), Number((calc.num + value) * -1), calc.sign)
             : math(Number(calc.res), Number(calc.num + value), calc.sign),
       });
     }
@@ -86,14 +84,14 @@ const App = () => {
       sign: !calc.num && value === "-" ? calc.sign : value,
       res: !calc.res && calc.num ? calc.num : calc.res,
       prevRes: !calc.res && calc.num ? calc.num : calc.res,
-      num: 0,
+      num: !calc.num && value === "-" ? value : 0,
     });
   };
 
   const equalsClickHandler = () => {
       setCalc({
         ...calc,
-        res: calc.res, // why must indicate the value of res is calc.res; if omitted, the calculator will not work
+        res: calc.res,
         sign: "",
         num: 0,
       });
