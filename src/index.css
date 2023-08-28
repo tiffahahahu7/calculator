@@ -7,8 +7,7 @@
 }
 
 body {
-  background-color: #fbb034;
-  background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
+  background-image: linear-gradient(360deg, #1870ad 0%, #8ab5dc 74%);
   height: 100vh;
   display: flex;
   align-items: center;
@@ -20,8 +19,7 @@ body {
   height: 540px;
   padding: 10px;
   border-radius: 15px;
-  background-color: #485461;
-  background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+  background-image: linear-gradient(315deg, #1b3c70 0%, #062948 74%);
 }
 
 .screen {
@@ -53,7 +51,7 @@ body {
 
 button {
   border: none;
-  background-color: rgb(80, 60, 209);
+  background-color: #ffb500;
   font-size: 24px;
   color: rgb(255, 255, 255);
   font-weight: bold;
@@ -63,16 +61,16 @@ button {
 }
 
 button:hover {
-  background-color: rgb(61, 43, 184);
+  background-color: #ffa500;
 }
 
 #clear {
   grid-column: 1 / 3;
-  background-color: rgb(243, 61, 29);
+  background-color: #ff724c;
 }
 
 #clear:hover {
-  background-color: rgb(228, 39, 15);
+  background-color: #f94d00;
 }
 
 #zero {
@@ -82,9 +80,9 @@ button:hover {
 #equals {
   grid-column: 4 / 5;
   grid-row: 4 / 6;
-  background-color: rgb(243, 61, 29);
+  background-color: #ff724c;
 }
 
 #equals:hover {
-  background-color: rgb(228, 39, 15);
+  background-color: #f94d00;
 }
